@@ -34,7 +34,7 @@ class App extends Component {
     console.log(this.state)
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
