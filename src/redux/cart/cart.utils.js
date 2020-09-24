@@ -10,7 +10,11 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
         : cartItem
     );
   }
-console.log('no existing')
+
   // New item
   return [...cartItems, { ...cartItemToAdd, quantity: 1 }]
+};
+
+export const clearItemFromCart = (cartItems, cartItemToAdd) => {
+  return cartItems.filter(cartItem => cartItem.id !== cartItemToAdd.id);
 };
