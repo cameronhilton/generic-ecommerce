@@ -20,6 +20,14 @@
       &:last-child {
         width: 8%;
       }
+
+      @media screen and (max-width: 800px) {
+        width: 22%;
+
+        &:last-child {
+          width: 12%;
+        }
+      }
     }
   }
 
@@ -39,5 +47,9 @@
     margin-top: 32px;
     font-size: 32px;
     color: red;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
   }
 }
