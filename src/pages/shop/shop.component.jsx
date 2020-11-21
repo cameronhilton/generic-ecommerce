@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import { Route } from "react-router-dom";
+import ErrorBoundary from "../../components/error-boundary/error-boundary.component";
 import Spinner from "../../components/spinner/spinner.component";
 import { connect } from "react-redux";
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions";
@@ -18,17 +19,19 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
 
   return (
     <div className="shop-page">
-      <Suspense fallback={<Spinner />}>
-        <Route
-          exact
-          path={`${match.path}`}
-          component={CollectionsOverviewContainer}
-        />
-        <Route
-          path={`${match.path}/:collectionId`}
-          component={CollectionPageContainer}
-        />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Spinner />}>
+          <Route
+            exact
+            path={`${match.path}`}
+            component={CollectionsOverviewContainer}
+          />
+          <Route
+            path={`${match.path}/:collectionId`}
+            component={CollectionPageContainer}
+          />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };
