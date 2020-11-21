@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../assets/whiskey.svg';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { ReactComponent as Logo } from "../../assets/whiskey.svg";
 
 export const HeaderContainer = styled.div`
   height: 70px;
