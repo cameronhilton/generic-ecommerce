@@ -1,4 +1,3 @@
-import React from "react";
 import "../../components/checkout-item/checkout-item.component";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";

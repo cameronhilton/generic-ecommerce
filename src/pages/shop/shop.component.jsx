@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Route } from "react-router-dom";
 import ErrorBoundary from "../../components/error-boundary/error-boundary.component";
 import Spinner from "../../components/spinner/spinner.component";

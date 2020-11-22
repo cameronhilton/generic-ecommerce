@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import { Profiler } from "react";
 import Directory from "../../components/directory/directory.component";
 import { HomePageContainer } from "./homepage.styles";
 
